@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1842" data-name="Rectangle 1842" width="25" height="25" transform="translate(1461.787 308)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="close_icon" transform="translate(-1461.787 -308)" clip-path="url(#clip-path)">
+    <path id="__TEMP__SVG__" d="M24.2,22.44,34.532,12.105a1.247,1.247,0,0,0-1.758-1.758L22.44,20.682,12.105,10.335a1.252,1.252,0,0,0-1.77,1.77L20.682,22.44,10.335,32.775a1.247,1.247,0,1,0,1.758,1.758L22.44,24.2,32.775,34.532a1.247,1.247,0,0,0,1.758-1.758Z" transform="translate(1451.922 298.032)"/>
+  </g>
+</svg>

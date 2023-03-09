@@ -1,0 +1,48 @@
+.space {
+    padding: 3.5rem 0;
+}
+.banner {
+    background-image: url(/img/home/download.jpg);
+    height: 400px;
+    background-position: 92%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-left: 1.5rem;
+        padding: 11rem 0;
+        h2 {
+            font-weight: 700;
+            font-size: clamp(4rem, 6vw, 7rem);
+            margin-bottom: 5rem;
+            color: $houseGreen;
+            line-height: 1.2;
+        }
+        a {
+            border: 1.5px solid $trueBlack;
+            width: fit-content;
+            padding: .5rem 1.3rem;
+            font-weight: 700;
+            border-radius: 2.5rem;
+            color: $houseGreen;
+            &:hover {
+                background-color: rgba($warmNeutral, .09);
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        & {
+            background-position: 100%;
+            height: 600px;
+        }
+        &__wrapper {
+            margin-left: unset;    
+            padding: 20rem 0;
+            h2 {
+                margin-top: 0;
+            }
+        }
+    }
+}
