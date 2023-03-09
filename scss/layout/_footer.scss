@@ -1,0 +1,101 @@
+.footer {
+    background-color: $clr-dark;
+    color: $clr-light;
+    padding: 3rem 0;
+    &__wrapper {
+        .top__footer {
+            ul {
+                font-size: 1.4rem;
+                display: flex;
+                align-items: center;
+                li {
+                    padding: 1rem;
+                    &:first-child {
+                        display: none;
+                    }
+                    &:nth-child(2) {
+                        a:hover {
+                            color: rgb(160, 59, 255);
+                        }
+                    }
+                    a {
+                        color: $clr-light;
+                    }
+                }
+                .gh-btn, .gh-count {
+                    font-size: 1.2rem;
+                    font-weight: 700;
+                    background-color: $clr-light;
+                    padding: 1px 5px 1px 5px;
+                    color: #333;
+                    text-decoration: none;
+                    text-shadow: 0 1px 0 #fff;
+                    white-space: nowrap;
+                    border-radius: .6rem;
+                }
+                .gh-btn:hover {
+                    background-color: darken($clr-light,10);
+                }
+
+                .gh-count:hover {
+                    color: $clr-blue;
+                }
+                .gh-count {
+                    position: relative;
+                }
+                .gh-count::before {
+                    content: '';
+                    position: absolute;
+                    display: inline-block;
+                    width: 0;
+                    height: 0;
+                    border-color: transparent;
+                    border-style: solid;
+                    top: 50%;
+                    left: -4px;
+                    margin-top: -4px;
+                    border-width: 4px 4px 4px 0;
+                    border-right-color: #fafafa;
+                }
+            }
+        }
+
+        .bottom__footer {
+            padding-top: 2rem;
+            ul {
+                display: flex;
+                justify-content: space-between;
+                li {
+                    a {
+                        color: $clr-light;
+                        &:hover {
+                            color: rgb(160, 59, 255);
+                        }
+                    }
+                    img {
+                        width: 10rem;
+                    }
+                }
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        &__wrapper {
+            @include centerBetween;
+            .top__footer {
+                ul {
+                    li {
+                        &:first-child {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .bottom__footer {
+                ul {
+                    gap: 4rem;
+                }
+            }
+        }
+    }
+}
