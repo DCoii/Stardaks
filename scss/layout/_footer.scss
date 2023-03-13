@@ -1,99 +1,63 @@
-.footer {
-    background-color: $clr-dark;
-    color: $clr-light;
-    padding: 3rem 0;
-    &__wrapper {
-        .top__footer {
-            ul {
-                font-size: 1.4rem;
-                display: flex;
-                align-items: center;
-                li {
-                    padding: 1rem;
-                    &:first-child {
-                        display: none;
-                    }
-                    &:nth-child(2) {
-                        a:hover {
-                            color: rgb(160, 59, 255);
-                        }
-                    }
-                    a {
-                        color: $clr-light;
-                    }
+.footer{
+    &__wrapper{
+        .icon{
+            padding-bottom: 2rem;
+            img {
+                width: 3.2rem;
+                transition: .5s ease;
+                &:hover {
+                    transform: translateY(-.5rem);
                 }
-                .gh-btn, .gh-count {
-                    font-size: 1.2rem;
-                    font-weight: 700;
-                    background-color: $clr-light;
-                    padding: 1px 5px 1px 5px;
-                    color: #333;
-                    text-decoration: none;
-                    text-shadow: 0 1px 0 #fff;
-                    white-space: nowrap;
-                    border-radius: .6rem;
+                &:nth-child(2) {
+                    margin: 0 1rem;
                 }
-                .gh-btn:hover {
-                    background-color: darken($clr-light,10);
-                }
-
-                .gh-count:hover {
-                    color: $clr-blue;
-                }
-                .gh-count {
-                    position: relative;
-                }
-                .gh-count::before {
-                    content: '';
-                    position: absolute;
-                    display: inline-block;
-                    width: 0;
-                    height: 0;
-                    border-color: transparent;
-                    border-style: solid;
-                    top: 50%;
-                    left: -4px;
-                    margin-top: -4px;
-                    border-width: 4px 4px 4px 0;
-                    border-right-color: #fafafa;
+                &:nth-child(3) {
+                    margin: 0 1rem 0 0;
                 }
             }
         }
 
-        .bottom__footer {
-            padding-top: 2rem;
-            ul {
-                display: flex;
-                justify-content: space-between;
-                li {
-                    a {
-                        color: $clr-light;
-                        &:hover {
-                            color: rgb(160, 59, 255);
+        .footer__text{
+            color: $trueBlack;
+            line-height: 4rem;
+            ul{
+                li{
+                    a{
+                        &:hover{
+                            color: #00754A;
                         }
                     }
-                    img {
-                        width: 10rem;
-                    }
                 }
+            }
+            p{
+                font-size: 1.4rem;
             }
         }
     }
+
     @include mediaQuery($desktop) {
-        &__wrapper {
-            @include centerBetween;
-            .top__footer {
-                ul {
-                    li {
-                        &:first-child {
-                            display: block;
-                        }
+        & {
+            padding: 3rem;
+        }
+
+        .container {
+            max-width: 150rem;
+            padding: 0;
+        }
+
+        .footer__text {
+            display: flex;
+            justify-content: space-between;
+            line-height: 1.2;
+            ul {
+                display: flex;
+                li {
+                    &:nth-child(2) {
+                        padding: 0 3rem;
                     }
-                }
-            }
-            .bottom__footer {
-                ul {
-                    gap: 4rem;
+                    &:nth-child(4) {
+                        padding: 0 3rem;
+                    }
                 }
             }
         }

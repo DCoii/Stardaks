@@ -1,12 +1,11 @@
-.space {
-    padding: 3.5rem 0;
-}
 .banner {
     background-image: url(/img/home/download.jpg);
     height: 50vh;
-    background-position: 92%;
+    background-position: 85%;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
@@ -14,6 +13,7 @@
         margin-left: 1.5rem;
         padding: 11rem 0;
         h2 {
+            padding-top: 7.5rem;
             font-weight: 700;
             font-size: clamp(4rem, 6vw, 7rem);
             margin-bottom: 5rem;
@@ -38,10 +38,9 @@
             height: 60vh;
         }
         &__wrapper {
-            margin-left: unset;    
-            padding: 20rem 0;
+            margin-left: unset;
             h2 {
-                margin-top: 0;
+                padding-top: 0;
             }
         }
     }
