@@ -1,3 +1,13 @@
+const bannerStay = document.querySelector(".app");
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset >= 70){
+    bannerStay.classList.add("stay");
+  }else{
+    bannerStay.classList.remove("stay");
+  }
+})
+
 const dropDown = document.querySelectorAll(".links__item h4");
 dropDown.forEach((dropDowns) => {
     dropDowns.addEventListener("click", () => {

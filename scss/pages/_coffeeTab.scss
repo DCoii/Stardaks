@@ -1,36 +1,68 @@
 .tabs {
-    padding: 10rem 0;
-    max-width: 120rem;
     .star__nav {
         padding-top: 5rem;
-        background-color: rgb(0, 255, 21);
+        background-color: rgba(212,233,226,.33);
         text-align: center;
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
         ul {
             display: flex;
             justify-content: center;
             margin-top: 2rem;
             li {
                 padding: 2rem;
-                border-bottom: 3px solid transparent;
-                &.active {
-                    border-bottom: 3px solid rgb(0, 0, 0);
-                }
+                width: 100%;
+                position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        background: transparent;
+                        height: 5px;
+                        width: 100%;
+                        transform: scaleX(0);
+                        transform-origin: bottom left;
+                        transition: .5s ease;
+                    }
+                    &.active::after {
+                        background-color: $sbGreen;
+                        transform: scaleX(1);
+                        transform-origin: bottom left;
+                        transition: .5s ease;
+                    }
                 a {
                     font-size: 2rem;
                     color: $trueBlack;
+                    font-weight: 600;
+                }
+                i {
+                    font-size: 1rem;
                 }
             }
         }
     }
     .coffee-tab {
-        background-color: rgb(255, 0, 200);
+        background-color: #d4e9e2;
         padding: 5rem 0;
+        position: relative;
+        min-height: 50vh;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
         &__content {
             display: none;
             text-align: center;
             margin: 0 2rem;
+            display: flex;
+            position: absolute;
+            opacity: 0;
             &.active {
                 display: block;
+                opacity: 1;
+                transition: .5s ease;
             }
             img {
                 @include imgFit(100%, 100%);
@@ -38,6 +70,50 @@
             &__text {
                 h2 {
                     margin: 2rem 0;
+                    font-size: 1.9rem;
+                }
+                p {
+                    display: block;
+                    margin-block-start: 1em;
+                    margin-block-end: 1em;
+                    margin-inline-start: 0px;
+                    margin-inline-end: 0px;
+                }
+            }
+        }
+    }
+    @include mediaQuery($desktop) {
+        .coffee-tab {
+            min-height: 40vh;
+            &__content {
+                &.active {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                &__text {
+                    max-width: 30rem;
+                    text-align: left;
+                    h2 {
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+            img {
+                @include imgFit(50%, 75%);
+            }
+        }
+
+        .star__nav {
+            ul {
+                li {
+                    width: 15rem;
+                    a {
+                        font-size: 2.4rem;
+                    }
+                    i {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }

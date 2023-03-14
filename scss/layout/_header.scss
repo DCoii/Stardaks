@@ -1,7 +1,6 @@
 .header {
     background-color: $trueWhite;
     padding: 1.5rem 0;
-    position: fixed;
     width: 100%;
     z-index: 2000;
     box-shadow: 1px 1px 1px .5px #c4c4c4;
@@ -195,6 +194,59 @@
                         margin: 0 3rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+/////////////////////////////////////////////////
+
+.app {
+    background-color: $houseGreen;
+    padding: 1rem 0;
+    &.stay {
+        width: 100%;
+        top: 0;
+        position: fixed;
+        transition: .5s ease;
+        z-index: 400;
+    }
+    
+    &__wrapper {
+        color: $trueWhite;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h3 {
+            font-size: 1.4rem;
+            letter-spacing: .1rem;
+            display: flex;
+            small {
+                font-size: 1rem;
+                padding-right: .5rem;
+            }
+        }
+        a {
+            border: 1.5px solid $trueWhite;
+            width: fit-content;
+            padding: .5rem 1.3rem;
+            font-weight: 600;
+            border-radius: 2.5rem;
+            color: $trueWhite;
+            font-size: 1.4rem;
+        }
+    }
+    @include mediaQuery($desktop) {
+        .container {
+            max-width: 150rem;
+            padding: 0;
+        }
+        &__wrapper {
+            h3 {
+                font-size: 1.5rem;
+            }
+            a {
+                display: none;
             }
         }
     }
